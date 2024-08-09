@@ -10,64 +10,67 @@
       :root {
           color-scheme: light;
       }
-  </style>
-  </head>
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const userLang = navigator.language || navigator.userLanguage;
+          const textElement = document.getElementById("localized-text");
+          const callMeButton = document.getElementById("call-me-button");
+
+          if (userLang.startsWith("fr")) {
+              textElement.innerHTML = "<strong>Votre partenaire pour tous vos besoins d'impression et de conception!</strong>";
+              callMeButton.textContent = "Appelez-moi";
+          } else {
+              textElement.innerHTML = "<strong>Your one stop for all your printing and designing needs!</strong>";
+              callMeButton.textContent = "Call me";
+          }
+
+          // Ensure the image is displayed
+          const callMeButtonImg = document.createElement("img");
+          callMeButtonImg.src = "./whitephone.png";
+          callMeButtonImg.width = 40;
+          callMeButtonImg.height = 40;
+          callMeButtonImg.style.position = "absolute";
+          callMeButtonImg.style.left = "10px";
+          callMeButtonImg.style.top = "50%";
+          callMeButtonImg.style.transform = "translateY(-50%)";
+          callMeButton.appendChild(callMeButtonImg);
+      });
+    </script>
+</head>
 <body class="gradient-background">
 
  <!-- Main image + txt -->
 
- 
  <div class="px-4 py-4 my-2 text-center">
     <img class="d-block mx-auto mb-4" src="./logo 3s.jpg" alt="" width="200px" height="200px" style="border-radius: 50%;">
     <h1 class="display-5 fw-bold text-body-emphasis">3Sticks</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4"> Your one stop for all your printing and designing needs!  </p>
+      <p id="localized-text" class="lead mb-4"><strong></strong></p>
     </div>
   </div>
 
-
  <!-- buttons -->
 
- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 my-4 mx-auto">
+ <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-10 col-11 my-4 mx-auto">
   <div class="d-grid gap-2">
-      <button class="btn btn-outline-dark btn-lg position-relative" type="button" onclick="window.location.href='https://www.instagram.com/3sticks.co/'">
+      <button class="btn btn-outline-warning btn-lg position-relative" type="button" onclick="window.location.href='https://www.instagram.com/3sticks.co/'">
           <img src="./Instagram_icon.png.webp" width="" height="40px" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);">
           <span style="display: inline-block; width: 100%;">Instagram</span>
       </button>
-      <button class="btn btn-outline-dark btn-lg position-relative mb-5" type="button" onclick="window.location.href='https://www.facebook.com/THREESTICKS/'">
-          <img src="./Facebook_Logo_2023.png" width="40px" height="40px" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);">
+      <button class="btn btn-outline-warning btn-lg position-relative mb-5" type="button" onclick="window.location.href='https://www.facebook.com/THREESTICKS/'">
+          <img src="./Facebook_Logo_2023.png" width="40px" height="40px" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); border-radius: 50%;">
           <span style="display: inline-block; width: 100%;">Facebook</span>
       </button>
-      <button class="btn btn-outline-dark btn-lg position-relative" type="button" onclick="window.location.href='mailto:service@3sticks.ca'">
-          <img src="./email.png" width="40px" height="40px" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); border-radius: 50%;">
+      <button class="btn btn-outline-warning btn-lg position-relative" type="button" onclick="window.location.href='mailto:service@3sticks.ca'">
+          <img src="./emaill white.png" width="40px" height="40px" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); border-radius: 50%;">
           <span style="display: inline-block; width: 100%;">Email</span>
       </button>
-      <button class="btn btn-outline-dark btn-lg position-relative mb-5" type="button" onclick="window.location.href='tel:+15147426992'">
-          <img src="./phone.png" width="40px" height="40px" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);">
-          <span style="display: inline-block; width: 100%;">Call me</span>
+      <button id="call-me-button" class="btn btn-outline-warning btn-lg position-relative mb-5" type="button" onclick="window.location.href='tel:+15147426992'">
+          <span style="display: inline-block; width: 100%;"></span>
       </button>
   </div>
 </div>
 
-
-
- 
-
-
-
-
- <!-- This is an HTML comment. It will not be displayed in the browser. -->
-
-
-
-
-
- <!-- This is an HTML comment. It will not be displayed in the browser. -->
-
-
-
-
-
- <!-- This is an HTML comment. It will not be displayed in the browser. -->
 </body>
 </html>

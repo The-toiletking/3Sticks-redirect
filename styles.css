@@ -1,21 +1,17 @@
+body, h1, h2, h3, h4, h5, h6, p, span, a, div {
+    color: rgb(240, 159, 8);
+}
+
+h1.display-5.fw-bold.text-body-emphasis {
+    color: rgb(240, 159, 8) !important;
+}
+
 .gradient-background {
-    background: linear-gradient(300deg, orange, rgba(128, 0, 128, 0.608), orange);
-    background-size: 180% 180%;
-    animation: gradient-animation 18s ease infinite;
-  }
-  
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+    background: url('./LOGO\ 3S\ COLOR.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
 
-
-
- 
+.btn-outline-warning {
+    border-color: rgb(240, 159, 8) !important;
+    color: rgb(240, 159, 8) !important;
+}
